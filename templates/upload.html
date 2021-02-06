@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/upload.css') }}">
+    <title>Image tagging by O. Danziger</title>
+</head>
+<body>
+
+<div class = "container">
+    <div class = "starter-template">
+        <h1>Object caption</h1>
+        <p class = "lead"> Upload an image to get the image with the objects tagged</p>
+        <p> Object caption using pre-trained model YOLO3 by DarkNet | Powered by Python, Flask, OpenCV </p>
+        <p> Image size limit: 2 MB </p>
+        <p> By Omer Danziger & Amit Markus- Feb, 2021 </p>
+    </div>
+</div>
+
+    <div class="wrapper">
+      <div class="container">
+        <h1>Upload a file</h1>
+        <div class="upload-container">
+          <div class="border-container">
+            <div class="icons fa-4x">
+              <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+              <i class="fas fa-file-image" data-fa-transform="shrink-2 up-4"></i>
+              <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
+            </div>
+
+            <form action="/upload" method="post" enctype="multipart/form-data" >
+                <p>Upload your image from Your computer:</p>
+                <p><input type= "file" name="image"
+                          style="position: relative; left:10%;">
+                </p>
+                <p></p>
+                <input type="submit" class="btn btn-dark" value="Get your captions">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+
+</html>
