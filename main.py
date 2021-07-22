@@ -72,7 +72,7 @@ def caption(img):
     print('caption started')
 
 
-    # Scaling the photo so the largest dimension will be 800
+    # Scaling the photo so the largest dimension will be 600
     scale = TO_SCALE / max(img.shape)
     width = int(img.shape[1] * scale)
     height = int(img.shape[0] * scale)
